@@ -1,0 +1,53 @@
+/* 1. BOLD VARIANT */
+/* 1. BOLD VARIANT */
+@font-face {
+  font-family: "Adesso";
+  font-weight: 700;
+  font-style: normal;
+  /* .. means "go out of the css folder, then look into the fonts folder" */
+  src: url("../css/fonts/font (1)/Adesso-Bold.woff2") format("woff2"),
+    url("../css/fonts/font (1)/Adesso-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+/* 2. THIN/REGULAR VARIANT */
+@font-face {
+  font-family: "Adesso";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../css/fonts/font (1)/AdessoW00-Regular.woff2") format("woff2"),
+    url("../css/fonts/font (1)/AdessoW00-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Adesso";
+}
+
+body {
+  background-color: #efdba8;
+  /* Use only font-family and include a generic fallback */
+  font-family: "Adesso";
+  /* Using a single padding value for consistency across the entire page */
+  padding: 7.5px;
+  margin: 0;
+  text-align: left; /* All text-based elements inherit left alignment */
+  color: black;
+}
+
+/* --- Home Page Styles --- */
+.home-page {
+  background-color: #efdba8; /* peachish */
+}
+
+.charts {
+  background-color: #fdba9d;
+}
+
+.tables {
+  background-color: #febb0b;
+}

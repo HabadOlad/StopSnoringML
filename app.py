@@ -9,9 +9,9 @@ def indexpage():
 
 
 @app.route("/chart") #THis will send them to the first thing, backslash is a default which normally sends people to the portfolio
-def portfoliopage():
+def chartpage():
     return render_template("chart.html")  #this will send them to the portfolio page
 
 @app.route("/tables") #THis will send them to the first thing, backslash is a default which normally sends people to the portfolio
-def portfoliopage():
+def tablepage():
     return render_template("tables.html")  #this will send them to the portfolio page
