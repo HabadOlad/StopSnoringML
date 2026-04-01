@@ -3,15 +3,25 @@ from datetime import datetime
 
 app = Flask(__name__) #this program is a flask application, tells flask that this is the main application program
 
-@app.route("/") #THis will send them to the first thing, backslash is a default which normally sends people to the index
-def indexpage():
-    return render_template("index.html")  #this will send them to the index page
+from flask import Flask, render_template
 
+app = Flask(__name__)
 
-@app.route("/chart") #THis will send them to the first thing, backslash is a default which normally sends people to the portfolio
-def chartpage():
-    return render_template("chart.html")  #this will send them to the portfolio page
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route("/tables") #THis will send them to the first thing, backslash is a default which normally sends people to the portfolio
-def tablepage():
-    return render_template("tables.html")  #this will send them to the portfolio page
+@app.route('/chart')
+def chart_page():
+    return render_template('chart.html')
+
+@app.route('/tables')
+def tables_page():
+    return render_template('tables.html')
+
+@app.route('/information')
+def info_page():
+    return render_template('information.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
