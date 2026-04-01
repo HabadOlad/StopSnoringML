@@ -56,9 +56,15 @@ body.information {
   background-color: #fc7753;
 }
 
+.navigation {
+  text-align: center; /* This centers all the links inside the div */
+  width: 100%; /* Ensures the container spans the full width */
+  margin-top: 20px; /* Optional: adds some space at the top */
+}
+
 .navigation a {
   background-color: transparent;
-
+  text-align: center;
   text-decoration: underline;
   padding: 10px;
   color: black; /* Or whatever color you want the text to be */
