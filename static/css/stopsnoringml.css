@@ -5,8 +5,8 @@
   font-weight: 700;
   font-style: normal;
   /* .. means "go out of the css folder, then look into the fonts folder" */
-  src: url("../css/fonts/font (1)/Adesso-Bold.woff2") format("woff2"),
-    url("../css/fonts/font (1)/Adesso-Bold.woff") format("woff");
+  src: url("../css/font/Adesso-Bold.woff2") format("woff2"),
+    url("../css/font/Adesso-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -15,8 +15,8 @@
   font-family: "Adesso";
   font-weight: 300;
   font-style: normal;
-  src: url("../css/fonts/font (1)/AdessoW00-Regular.woff2") format("woff2"),
-    url("../css/fonts/font (1)/AdessoW00-Regular.woff") format("woff");
+  src: url("../css/font/AdessoW00-Regular.woff2") format("woff2"),
+    url("../css/font/AdessoW00-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -40,14 +40,27 @@ body {
 }
 
 /* --- Home Page Styles --- */
-.home-page {
+body.index {
   background-color: #efdba8; /* peachish */
 }
 
-.charts {
+body.charts {
   background-color: #fdba9d;
 }
 
-.tables {
+body.tables {
   background-color: #febb0b;
+}
+
+body.information {
+  background-color: #fc7753;
+}
+
+.navigation a {
+  background-color: transparent;
+
+  text-decoration: underline;
+  padding: 10px;
+  color: black; /* Or whatever color you want the text to be */
+  font-size: 25px;
 }

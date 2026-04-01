@@ -1,8 +1,7 @@
-{% extends "layout.html" %} {% block mainBlock %}
-<body class="charts-page">
-  <h1>The daily Chart!</h1>
-  <footer id="footer"></footer>
-  <script src="/static/js/" type="text/javascript"></script>
+{% extends "layout.html" %} {% block body_class %}charts{% endblock %} {% block
+mainBlock %}
+<h1>The daily Chart!</h1>
 
-  {% endblock %}
-</body>
+<footer id="footer"></footer>
+<script src="/static/js/your_script.js" type="text/javascript"></script>
+{% endblock %}

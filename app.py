@@ -20,7 +20,7 @@ def tables_page():
     return render_template('tables.html')
 
 @app.route('/information')
-def info_page():
+def information_page():
     return render_template('information.html')
 
 if __name__ == '__main__':

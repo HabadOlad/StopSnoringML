@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<body>
+  <title>StopSnoringML</title>
+<body class="{% block body_class %}{% endblock %}">
  <div class="navigation">
   <div class="navigation">
-    <a href="{{ url_for('chart_page') }}" id="chart"></a>
-    <a href="{{ url_for('tables_page') }}" id="tables"></a>
-    <a href="{{ url_for('info_page') }}" id="info"></a>
+    <a href="{{ url_for('index') }}" id="index" class="index"></a>
+    <a href="{{ url_for('chart_page') }}" id="chart" class="chart"></a>
+    <a href="{{ url_for('tables_page') }}" id="tables" class="tables"></a>
+    <a href="{{ url_for('information_page') }}" id="information" class="information"></a>
   </div>
  </div>
   <footer id="footer"></footer>
