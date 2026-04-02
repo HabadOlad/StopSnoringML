@@ -35,7 +35,7 @@ body {
   /* Using a single padding value for consistency across the entire page */
   padding: 7.5px;
   margin: 0;
-  text-align: left; /* All text-based elements inherit left alignment */
+  text-align: center; /* All text-based elements inherit left alignment */
   color: black;
 }
 
