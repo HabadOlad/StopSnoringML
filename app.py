@@ -3,10 +3,6 @@ from datetime import datetime
 
 app = Flask(__name__) #this program is a flask application, tells flask that this is the main application program
 
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
 @app.route('/')
 def index():
     return render_template('index.html')
