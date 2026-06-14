@@ -40,13 +40,13 @@ body {
   padding: 7.5px;
   margin: 0;
   text-align: center; /* All text-based elements inherit left alignment */
-  color: #ffffff;
+  color: #e2e8f0;
 }
 
 /* --- Home Page Styles --- */
 body.index {
   background-color: #00003f; /* dark dark blue */
-  color: #ffffff;
+  color: #e2e8f0;
   text-align: center;
   overflow-x: hidden;
   position: relative;
