@@ -1,22 +1,27 @@
-/* 1. BOLD VARIANT */
-/* 1. BOLD VARIANT */
+/* 1. Light Variant (Weight: 300) */
 @font-face {
-  font-family: "Adesso";
-  font-weight: 700;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 300;
   font-style: normal;
-  /* .. means "go out of the css folder, then look into the fonts folder" */
-  src: url("../css/font/Adesso-Bold.woff2") format("woff2"),
-    url("../css/font/Adesso-Bold.woff") format("woff");
+  src: url("../css/font/PlusJakartaSans-Light.ttf") format("truetype");
   font-display: swap;
 }
 
-/* 2. THIN/REGULAR VARIANT */
+/* 2. Regular Variant (Weight: 400) */
 @font-face {
-  font-family: "Adesso";
-  font-weight: 300;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 400; /* Changed from 300 to 400 for Regular */
   font-style: normal;
-  src: url("../css/font/AdessoW00-Regular.woff2") format("woff2"),
-    url("../css/font/AdessoW00-Regular.woff") format("woff");
+  src: url("../css/font/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* 3. Bold Variant (Weight: 700) */
+@font-face {
+  font-family: "Plus Jakarta Sans"; /* Grouped under the same family name */
+  font-weight: 700;
+  font-style: normal;
+  src: url("../css/font/PlusJakartaSans-Bold.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -25,48 +30,80 @@ html {
 }
 
 * {
-  font-family: "Adesso";
+  font-family: "Plus Jakarta Sans";
 }
 
 body {
-  background-color: #efdba8;
   /* Use only font-family and include a generic fallback */
-  font-family: "Adesso";
+  font-family: "Plus Jakarta Sans";
   /* Using a single padding value for consistency across the entire page */
   padding: 7.5px;
   margin: 0;
   text-align: center; /* All text-based elements inherit left alignment */
-  color: black;
+  color: #ffffff;
 }
 
 /* --- Home Page Styles --- */
 body.index {
-  background-color: #efdba8; /* peachish */
+  background-color: #00003f; /* dark dark blue */
+  color: #ffffff;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body.charts {
-  background-color: #fdba9d;
+  background-color: #20003f;
 }
 
 body.tables {
-  background-color: #febb0b;
+  background-color: #0d1117;
 }
 
 body.information {
-  background-color: #fc7753;
+  background-color: #1a102f;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Sits on top of the background stars */
+  padding-top: 15vh;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #94a3b8;
 }
 
 .navigation {
-  text-align: center; /* This centers all the links inside the div */
-  width: 100%; /* Ensures the container spans the full width */
-  margin-top: 20px; /* Optional: adds some space at the top */
+  position: relative;
+  z-index: 2; /* Sits cleanly on top of the canvas */
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 700;
 }
 
 .navigation a {
   background-color: transparent;
-  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #a5b4fc; /* Light blue-ish purple link color */
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #ffffff;
   text-decoration: underline;
-  padding: 10px;
-  color: black; /* Or whatever color you want the text to be */
-  font-size: 25px;
 }
