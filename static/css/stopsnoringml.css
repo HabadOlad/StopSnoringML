@@ -10,7 +10,7 @@
 /* 2. Regular Variant (Weight: 400) */
 @font-face {
   font-family: "Plus Jakarta Sans";
-  font-weight: 400; /* Changed from 300 to 400 for Regular */
+  font-weight: 400;
   font-style: normal;
   src: url("../css/font/PlusJakartaSans-Regular.ttf") format("truetype");
   font-display: swap;
@@ -18,92 +18,121 @@
 
 /* 3. Bold Variant (Weight: 700) */
 @font-face {
-  font-family: "Plus Jakarta Sans"; /* Grouped under the same family name */
+  font-family: "Plus Jakarta Sans";
   font-weight: 700;
   font-style: normal;
   src: url("../css/font/PlusJakartaSans-Bold.ttf") format("truetype");
   font-display: swap;
 }
 
+/* --- Design Tokens / Root Variables --- */
+:root {
+  /* Typography */
+  --font-primary: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --font-size-p: 1.2rem;
+  --font-size-nav: 20px;
+  --font-size-h1: 3rem;
+
+  /* Colors - Text */
+  --color-text-main: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-link: #a5b4fc;
+  --color-text-link-hover: #ffffff;
+
+  /* Colors - Backgrounds */
+  --bg-index: #00003f; /* dark dark blue */
+  --bg-charts: #20003f;
+  --bg-tables: #0d1117;
+  --bg-information: #1a102f;
+
+  /* Spacing */
+  --body-padding: 7.5px;
+}
+
+/* --- Base & Reset Styles --- */
 html {
   scroll-behavior: smooth;
 }
 
 * {
-  font-family: "Plus Jakarta Sans";
+  font-family: var(--font-primary);
 }
 
 body {
-  /* Use only font-family and include a generic fallback */
-  font-family: "Plus Jakarta Sans";
-  /* Using a single padding value for consistency across the entire page */
-  padding: 7.5px;
+  font-family: var(--font-primary);
+  padding: var(--body-padding);
   margin: 0;
-  text-align: center; /* All text-based elements inherit left alignment */
-  color: #e2e8f0;
+  text-align: center;
+  color: var(--color-text-main);
 }
 
 /* --- Home Page Styles --- */
 body.index {
-  background-color: #00003f; /* dark dark blue */
-  color: #e2e8f0;
+  background-color: var(--bg-index);
+  color: var(--color-text-main);
   text-align: center;
   overflow-x: hidden;
   position: relative;
 }
 
 body.charts {
-  background-color: #20003f;
+  background-color: var(--bg-charts);
 }
 
 body.tables {
-  background-color: #0d1117;
+  background-color: var(--bg-tables);
 }
 
 body.information {
-  background-color: #1a102f;
+  background-color: var(--bg-information);
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Sits on top of the background stars */
+  z-index: 2;
   padding-top: 15vh;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 10px;
   letter-spacing: -1px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #94a3b8;
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-muted);
 }
 
 .navigation {
   position: relative;
-  z-index: 2; /* Sits cleanly on top of the canvas */
+  z-index: 2;
   text-align: center;
   width: 100%;
   margin-top: 20px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .navigation a {
   background-color: transparent;
   text-decoration: none;
   padding: 10px 20px;
-  color: #a5b4fc; /* Light blue-ish purple link color */
-  font-size: 20px;
+  color: var(--color-text-link);
+  font-size: var(--font-size-nav);
   transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-  color: #ffffff;
+  color: var(--color-text-link-hover);
   text-decoration: underline;
 }
