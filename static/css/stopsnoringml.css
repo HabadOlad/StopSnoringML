@@ -29,10 +29,10 @@
   --font-size-h1: 3rem;
 
   /* Colors - Text */
-  --color-text-main: #black;
+  --color-text-main: #080808;
   --color-text-muted: #94a3b8;
-  --color-text-link: #a5b4fc;
-  --color-text-link-hover: #ffffff;
+  --color-text-link: #3730a3;
+  --color-text-link-hover: #1e1b4b;
 
   /* Colors - Backgrounds */
   --bg-for-all: #e1e0fd; /* dark dark blue */
