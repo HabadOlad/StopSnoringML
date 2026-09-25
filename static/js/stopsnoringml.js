@@ -14,8 +14,8 @@ document
   .getElementById("whyibuiltthis")
   ?.insertAdjacentHTML(
     "beforeend",
-    "<p>I built this to help track snoring patterns using ML.</p>",
-    "<p>(and obviously to help me stop snoring!).</p>"
+    "<p>I built this to help track snoring patterns using ML.</p>" +
+      "<p>(and obviously to help me stop snoring!).</p>"
   );
 document
   .getElementById("howdoesitwork")

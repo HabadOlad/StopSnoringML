@@ -25,7 +25,7 @@
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --font-size-p: 1.2rem;
-  --font-size-nav: 20px;
+  --font-size-nav: 30px;
   --font-size-h1: 3rem;
 
   /* Colors - Text */
@@ -115,10 +115,13 @@ body.information {
   padding: 10px 20px;
   color: var(--color-text-link);
   font-size: var(--font-size-nav);
-  transition: color 0.3s ease;
+  font-style: normal;
+  transition: color 0.3s ease, font-style 0.2s ease;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:active {
+  font-style: italic;
   color: var(--color-text-link-hover);
   text-decoration: underline;
 }
