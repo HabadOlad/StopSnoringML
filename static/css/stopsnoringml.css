@@ -1,55 +1,41 @@
-/* 1. Light Variant (Weight: 300) */
+/* 1. Regular Variant */
 @font-face {
-  font-family: "Plus Jakarta Sans";
-  font-weight: 300;
-  font-style: normal;
-  src: url("../css/font/PlusJakartaSans-Light.ttf") format("truetype");
-  font-display: swap;
-}
-
-/* 2. Regular Variant (Weight: 400) */
-@font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: "Instrument Serif";
   font-weight: 400;
   font-style: normal;
-  src: url("../css/font/PlusJakartaSans-Regular.ttf") format("truetype");
+  src: url("../css/font/InstrumentSerif-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
-/* 3. Bold Variant (Weight: 700) */
+/* 2. Italic Variant */
 @font-face {
-  font-family: "Plus Jakarta Sans";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../css/font/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-family: "Instrument Serif";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../css/font/InstrumentSerif-Italic.ttf") format("truetype");
   font-display: swap;
 }
 
 /* --- Design Tokens / Root Variables --- */
 :root {
   /* Typography */
-  --font-primary: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, sans-serif;
+  --font-primary: "Instrument Serif", Georgia, Cambria, "Times New Roman", Times,
+    serif;
 
-  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-
   --font-size-p: 1.2rem;
   --font-size-nav: 20px;
   --font-size-h1: 3rem;
 
   /* Colors - Text */
-  --color-text-main: #e2e8f0;
+  --color-text-main: #black;
   --color-text-muted: #94a3b8;
   --color-text-link: #a5b4fc;
   --color-text-link-hover: #ffffff;
 
   /* Colors - Backgrounds */
-  --bg-index: #00003f; /* dark dark blue */
-  --bg-charts: #20003f;
-  --bg-tables: #0d1117;
-  --bg-information: #1a102f;
+  --bg-for-all: #e1e0fd; /* dark dark blue */
 
   /* Spacing */
   --body-padding: 7.5px;
@@ -74,7 +60,7 @@ body {
 
 /* --- Home Page Styles --- */
 body.index {
-  background-color: var(--bg-index);
+  background-color: var(--bg-for-all);
   color: var(--color-text-main);
   text-align: center;
   overflow-x: hidden;
@@ -82,15 +68,15 @@ body.index {
 }
 
 body.charts {
-  background-color: var(--bg-charts);
+  background-color: var(--bg-for-all);
 }
 
 body.tables {
-  background-color: var(--bg-tables);
+  background-color: var(--bg-for-all);
 }
 
 body.information {
-  background-color: var(--bg-information);
+  background-color: var(--bg-for-all);
 }
 
 .hero-content {
