@@ -100,6 +100,12 @@ body.information {
   color: var(--color-text-muted);
 }
 
+.hero-animation {
+  margin-bottom: -100px; /* Negative margin pulls the text upward */
+  position: relative;
+  z-index: 2;
+}
+
 .navigation {
   position: relative;
   z-index: 2;
